@@ -1,0 +1,1 @@
+# Edge Impulse SDK Zephyr module
