@@ -1,4 +1,3 @@
 name: edge-impulse-sdk-zephyr
 build:
-  #cmake: edge-impulse-sdk-zephyr/edge-impulse-sdk/cmake/zephyr
   cmake: .
