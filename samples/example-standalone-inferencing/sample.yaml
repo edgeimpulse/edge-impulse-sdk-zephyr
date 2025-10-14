@@ -1,0 +1,11 @@
+sample:
+  description: example-standalone-inferencing-zephyr-module, the simplest Edge Impulse example for Zephyr
+    application
+  name: example-standalone-inferencing-zephyr-module
+common:
+    tags: introduction
+    harness: console
+    harness_config:
+      type: one_line
+      regex:
+        - "Hello World! (.*)"

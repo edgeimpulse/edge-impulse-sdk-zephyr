@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13.1)
+cmake_minimum_required(VERSION 3.20.0)
 
 include(edge-impulse-sdk/cmake/utils.cmake)
 add_subdirectory(edge-impulse-sdk/cmake/zephyr)

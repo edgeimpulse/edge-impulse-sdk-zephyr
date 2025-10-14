@@ -1,0 +1,5 @@
+name: motion v60
+build:
+  cmake: .
+  depends:
+    - edge-impulse-sdk-zephyr
