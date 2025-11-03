@@ -1,0 +1,5 @@
+config EDGE_IMPULSE_SDK
+  bool "Edge Impulse SDK"
+  default n
+  help
+    Include the Edge Impulse SDK in the build

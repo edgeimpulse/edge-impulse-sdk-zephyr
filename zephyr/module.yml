@@ -1,3 +1,4 @@
 name: edge-impulse-sdk-zephyr
 build:
   cmake: .
+  kconfig: Kconfig
