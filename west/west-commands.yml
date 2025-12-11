@@ -1,0 +1,9 @@
+west-commands:
+  - file: west/ei_zephyr.py
+    commands:
+      - name: ei-build
+        class: EdgeImpulseBuild
+        help: build project with Edge Impulse
+      - name: ei-deploy
+        class: EdgeImpulseDeploy
+        help: deploy project from Edge Impulse Studio
