@@ -22,7 +22,7 @@ def get_project_name(prj_id, xapikeys):
     if (response_info.status_code != 200):
             print("Error: Can't get project info.")
             return None
-            
+
     response_info_json = response_info.json()
     return (response_info.json())['project']['name']
 
@@ -59,11 +59,11 @@ def get_deployment(prj_id, xapikeys, impulse_id, engine, model_type):
 
     if response.status_code != 200:
         return False
-    
+
     with open("ei_model.zip", "wb") as f:
         f.write(response.content)
     return True
-    
+
 
 class EdgeImpulseDeploy(WestCommand):
 
@@ -120,7 +120,7 @@ class EdgeImpulseBuild(WestCommand):
 
         parser.add_argument('-e', '--engine', help='Available options: tflite, tflite-eon.', choices=['tflite', 'tflite-eon'], default = 'tflite-eon')      # engine type
         parser.add_argument('-t', '--modeltype', help='Optional model type of the build (if not, it uses the settings in the Keras block)', choices=['int8', 'float32'], default = 'int8')   # model type
-    
+
         return parser           # gets stored as self.parser
 
     def do_run(self, args, unknown_args):
@@ -133,4 +133,4 @@ class EdgeImpulseBuild(WestCommand):
         else:
             print("Build started successfully.")
             print("Response text = ", response_text)
-        
+
