@@ -3,7 +3,7 @@
 Portable library for digital signal processing and machine learning inferencing. This repository contains the device implementation in C++ for both processing and learning blocks in Edge Impulse.
 
 ## Import the Edge Impulse SDK
-There are different ways to import the [Edge Impulse SDK Zepyhr module](https://github.com/edgeimpulse/edge-impulse-sdk-zephyr):
+There are different ways to import the Edge Impulse SDK Zepyhr module [see our documentation](https://docs.edgeimpulse.com/hardware/deployments/run-zephyr-module):
 1. Update the `west.yml` of your Zephyr repo adding the lines below for the Edge Impulse SDK then call `west update` to downlaod the SDK into your Zepyr repo.
 
 2. If your application is using a local manifest `west.yml`, update it adding the lines below.
