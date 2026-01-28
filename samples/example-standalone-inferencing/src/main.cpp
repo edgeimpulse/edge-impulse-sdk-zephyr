@@ -6,6 +6,7 @@
 #include <zephyr.h>
 #endif
 #include "edge-impulse-sdk/classifier/ei_run_classifier.h"
+#include "edge-impulse-sdk/classifier/ei_print_results.h"
 #include "edge-impulse-sdk/porting/ei_classifier_porting.h"
 #include "edge-impulse-sdk/dsp/numpy.hpp"
 #ifdef EI_NORDIC
@@ -56,7 +57,7 @@ int main() {
 
         if (res != 0) return 1;
 
-        display_results(&ei_default_impulse, &result);
+        ei_print_results(&ei_default_impulse, &result);
         
         k_msleep(2000);
     }
