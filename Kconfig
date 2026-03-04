@@ -3,3 +3,12 @@ config EDGE_IMPULSE_SDK
   default n
   help
     Include the Edge Impulse SDK in the build
+
+config EDGE_IMPULSE_HEAP_TYPE
+  int "Dynamic memory functions"
+  range 0 1
+  default 1
+  help
+    Define which malloc will be used by the EI-SDK.
+    0: malloc/free are used
+    1: k_malloc/k_free are used
