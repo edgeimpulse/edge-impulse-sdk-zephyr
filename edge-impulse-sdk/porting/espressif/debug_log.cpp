@@ -1,6 +1,6 @@
 /* The Clear BSD License
  *
- * Copyright (c) 2026 EdgeImpulse Inc.
+ * Copyright (c) 2025 EdgeImpulse Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,11 +32,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _EI_SDK_VERSION_H_
-#define _EI_SDK_VERSION_H_
+#include "../ei_classifier_porting.h"
+#if EI_PORTING_ESPRESSIF == 1
 
-#define EI_SDK_VERSION_MAJOR             1
-#define EI_SDK_VERSION_MINOR             91
-#define EI_SDK_VERSION_PATCH             0
+#include "edge-impulse-sdk/tensorflow/lite/micro/debug_log.h"
+#include <stdio.h>
+#include <stdarg.h>
 
-#endif
+// On mbed platforms, we set up a serial port and write to it for debug logging.
+#if defined(__cplusplus) && EI_C_LINKAGE == 1
+extern "C"
+#endif // defined(__cplusplus) && EI_C_LINKAGE == 1
+void DebugLog(const char* s) {
+    ei_printf("%s", s);
+}
+
+#endif // EI_PORTING_ESPRESSIF
