@@ -37,6 +37,6 @@
 
 #define EI_SDK_VERSION_MAJOR             1
 #define EI_SDK_VERSION_MINOR             92
-#define EI_SDK_VERSION_PATCH             19
+#define EI_SDK_VERSION_PATCH             20
 
 #endif
