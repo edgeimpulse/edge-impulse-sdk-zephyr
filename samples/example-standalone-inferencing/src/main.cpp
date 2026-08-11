@@ -1,5 +1,5 @@
 // Zephyr 3.1.x and newer uses different include scheme
-#include <version.h>
+#include <zephyr/version.h>
 #if (KERNEL_VERSION_MAJOR > 3) || ((KERNEL_VERSION_MAJOR == 3) && (KERNEL_VERSION_MINOR >= 1))
 #include <zephyr/kernel.h>
 #else
