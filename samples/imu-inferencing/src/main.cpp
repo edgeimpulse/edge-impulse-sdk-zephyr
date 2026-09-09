@@ -1,6 +1,7 @@
+
 /* The Clear BSD License
  *
- * Copyright (c) 2026 EdgeImpulse Inc.
+ * Copyright (c) 2025 EdgeImpulse Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,11 +33,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _EI_SDK_VERSION_H_
-#define _EI_SDK_VERSION_H_
+#include <zephyr/kernel.h>
+#include "sensors/ei_accelerometer.h"
+#include "sensors/ei_inertial.h"
+#include "inference/inferencing.h"
+#include <stdio.h>
 
-#define EI_SDK_VERSION_MAJOR             1
-#define EI_SDK_VERSION_MINOR             95
-#define EI_SDK_VERSION_PATCH             11
+int main(void)
+{
+    
+    // This is needed so that output of printf is output immediately without buffering
+    setvbuf(stdout, NULL, _IONBF, 0);
 
-#endif
+    ei_inertial_init();
+    ei_accelerometer_init();
+
+    ei_inference_sm(); // run state machine
+
+    return 0;
+}

@@ -1,0 +1,9 @@
+build/*
+.vscode/*
+tags
+.west/
+bootloader/
+modules/
+tools/
+zephyr/
+env/

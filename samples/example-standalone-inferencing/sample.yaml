@@ -8,4 +8,4 @@ common:
     harness_config:
       type: one_line
       regex:
-        - "Hello World! (.*)"
+        - "Edge Impulse standalone inferencing \\(Zephyr\\)(.*)"

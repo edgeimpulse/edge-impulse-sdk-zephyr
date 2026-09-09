@@ -1,6 +1,6 @@
 /* The Clear BSD License
  *
- * Copyright (c) 2026 EdgeImpulse Inc.
+ * Copyright (c) 2025 EdgeImpulse Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,11 +32,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _EI_SDK_VERSION_H_
-#define _EI_SDK_VERSION_H_
+#ifndef EI_ACCELEROMETER_H
+#define EI_ACCELEROMETER_H
 
-#define EI_SDK_VERSION_MAJOR             1
-#define EI_SDK_VERSION_MINOR             95
-#define EI_SDK_VERSION_PATCH             11
+#define ACCEL_AXIS_SAMPLED          3
 
-#endif
+bool ei_accelerometer_init(void);
+void ei_fusion_accelerometer_read_data(int n_samples);
+
+#endif /* EI_ACCELEROMETER_H */

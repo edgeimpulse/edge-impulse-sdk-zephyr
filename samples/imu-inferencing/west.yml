@@ -1,0 +1,21 @@
+manifest:
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote:  zephyrproject-rtos
+      repo-path: zephyr
+      revision: main
+      import: true
+
+    - name: edge-impulse-sdk-zephyr
+      description: Edge Impulse SDK for Zephyr
+      path: modules/edge-impulse-sdk-zephyr
+      revision: main
+      url: https://github.com/edgeimpulse/edge-impulse-sdk-zephyr
+
+  self:
+    path: inference-example

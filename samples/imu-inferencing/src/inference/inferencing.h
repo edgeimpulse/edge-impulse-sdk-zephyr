@@ -1,6 +1,6 @@
 /* The Clear BSD License
  *
- * Copyright (c) 2026 EdgeImpulse Inc.
+ * Copyright (c) 2025 EdgeImpulse Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,11 +32,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _EI_SDK_VERSION_H_
-#define _EI_SDK_VERSION_H_
+#ifndef INFERENCING_H
+#define INFERENCING_H
 
-#define EI_SDK_VERSION_MAJOR             1
-#define EI_SDK_VERSION_MINOR             95
-#define EI_SDK_VERSION_PATCH             11
+#include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
 #endif
+
+extern bool ei_inference_sm(void);
+extern bool ei_samples_callback(const void *raw_sample, uint32_t raw_sample_size);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // INFERENCING_H

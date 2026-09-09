@@ -1,0 +1,11 @@
+sample:
+  description: Run inference using one of the ST sensor hat
+    application
+  name: inference-example
+common:
+    tags: introduction
+    harness: console
+    harness_config:
+      type: one_line
+      regex:
+        - "Edge Impulse start inferencing on Zephyr(.*)"
